@@ -1,297 +1,495 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>InternLink</title>
-  <link href="./style.css" rel="stylesheet">
-</head>
-<body class="bg-yellow-50 text-gray-800">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>InternLink</title>
+    <link href="./style.css" rel="stylesheet" />
+  </head>
 
-  <!-- Navigation Bar -->
-  <nav class="w-full bg-yellow-100 px-8 py-4 flex justify-between items-center fixed top-0 z-50 shadow">
-    <span class="font-bold text-yellow-400 text-xl">InternLink</span>
-    <ul class="flex gap-8 items-center font-medium">
-      <li><a href="#" class="hover:text-yellow-500">Internships</a></li>
-      <li><a href="#" class="hover:text-yellow-500">Skills</a></li>
-      <li><a href="#" class="hover:text-yellow-500">Blog</a></li>
-      <li>
-        <a href="#" class="bg-yellow-400 px-4 py-2 rounded text-white shadow hover:bg-yellow-500 transition">Get Started</a>
-      </li>
-    </ul>
-  </nav>
+  <body class="bg-yellow-50 text-gray-800">
+    <!-- Navigation Bar -->
+    <nav class="w-full bg-yellow-100 px-8 py-4 flex justify-between items-center fixed top-0 z-50 shadow">
+      <!-- Logo -->
+      <span class="font-bold text-yellow-400 text-2xl">InternLink</span>
 
-  <!-- Hero Section -->
-  <section class="flex flex-col md:flex-row justify-between items-center mt-24 px-8 py-12 bg-yellow-50">
-    <div class="max-w-xl">
-      <h1 class="text-5xl font-bold text-gray-900 mb-4">
-        Unlock Your <span class="text-yellow-400">Potential</span> <br>with InternLink
-      </h1>
-      <p class="mb-6 text-lg text-gray-700">Discover premium internships, build in-demand skills, and accelerate your career with our comprehensive platform designed for ambitious graduates.</p>
+      <!-- Desktop Menu -->
+      <ul class="hidden md:flex gap-8 items-center font-medium">
+        <li><a href="#" class="hover:text-yellow-500">Internships</a></li>
+        <li><a href="#" class="hover:text-yellow-500">Skills</a></li>
+        <li><a href="#" class="hover:text-yellow-500">Blog</a></li>
+        <li>
+          <a href="#"
+            class="bg-yellow-400 px-4 py-2 rounded text-white shadow hover:bg-yellow-500 transition">
+            Get Started
+          </a>
+        </li>
+      </ul>
+
+      <!-- Mobile Hamburger -->
+      <button id="menu-btn" class="md:hidden flex flex-col gap-1 focus:outline-none">
+        <span class="w-6 h-1 bg-yellow-500 rounded"></span>
+        <span class="w-6 h-1 bg-yellow-500 rounded"></span>
+        <span class="w-6 h-1 bg-yellow-500 rounded"></span>
+      </button>
+    </nav>
+
+    <!-- Mobile Menu (animated dropdown) -->
+    <div id="menu" class="max-h-0 overflow-hidden transition-all duration-500 ease-in-out flex flex-col gap-4 bg-yellow-50 px-8 md:hidden fixed top-[64px] left-0 w-full shadow-lg z-40">
+      <a href="#" class="hover:text-yellow-500 py-2">Internships</a>
+      <a href="#" class="hover:text-yellow-500 py-2">Skills</a>
+      <a href="#" class="hover:text-yellow-500 py-2">Blog</a>
+      <a href="#" class="bg-yellow-400 px-4 py-2 rounded text-white shadow hover:bg-yellow-500 transition text-center">
+        Get Started
+      </a>
     </div>
-    <div class="w-80 md:w-[28rem]">
-      <img src="./src/graduate.png" alt="Graduate" class="rounded-lg shadow-lg object-cover w-full h-full" />
-    </div>
-  </section>
 
-  <!-- Insights & Inspiration -->
-  <section class="bg-yellow-100 py-12 px-8">
-    <div class="flex flex-col md:flex-row items-center gap-8">
-      <div class="max-w-xl flex-1">
-        <h2 class="text-4xl font-bold mb-4">Insights <span class="text-yellow-400">& Inspiration</span></h2>
-        <p class="mb-4 text-lg">
-          Stay informed with the latest career advice, industry insights, and success stories from our community of graduates and professionals.
+    <!-- Hero Section -->
+    <section
+      class="flex flex-col md:flex-row justify-between items-center mt-24 px-8 py-12 bg-yellow-50"
+    >
+      <div class="max-w-xl">
+        <h1 class="text-5xl font-bold text-gray-900 mb-4">
+          Unlock Your <span class="text-yellow-400">Potential</span> <br />with
+          InternLink
+        </h1>
+        <p class="mb-6 text-lg text-gray-700">
+          Discover premium internships, build in-demand skills, and accelerate
+          your career with our comprehensive platform designed for ambitious
+          graduates.
         </p>
-        <h3 class="text-2xl font-bold mb-2">Your Guide to Career Success</h3>
-        <p class="mb-6">
-          From landing your first internship to negotiating your dream job offer, our expert-written articles provide actionable insights and real-world advice to help you navigate your career journey with confidence.
-        </p>
-        <!-- Category tags -->
-        <div class="flex flex-wrap gap-2 mb-3">
-          <span class="px-3 py-1 bg-yellow-400 text-white rounded-full text-sm">All</span>
-          <span class="px-3 py-1 bg-yellow-200 text-yellow-800 rounded-full text-sm">Career Tips</span>
-          <span class="px-3 py-1 bg-yellow-200 text-yellow-800 rounded-full text-sm">Interview Prep</span>
-          <span class="px-3 py-1 bg-yellow-200 text-yellow-800 rounded-full text-sm">Remote Work</span>
-          <span class="px-3 py-1 bg-yellow-200 text-yellow-800 rounded-full text-sm">Networking</span>
-          <span class="px-3 py-1 bg-yellow-200 text-yellow-800 rounded-full text-sm">Salary Tips</span>
-          <span class="px-3 py-1 bg-yellow-200 text-yellow-800 rounded-full text-sm">Technology</span>
+      </div>
+      <div class="w-80 md:w-[28rem]">
+        <img
+          src="./src/graduate.png"
+          alt="Graduate"
+          class="rounded-lg shadow-lg object-cover w-full h-full"
+        />
+      </div>
+    </section>
+
+    <!-- Insights & Inspiration -->
+    <section class="bg-yellow-100 py-12 px-8">
+      <div class="flex flex-col md:flex-row items-center gap-8">
+        <div class="max-w-xl flex-1">
+          <h2 class="text-4xl font-bold mb-4">
+            Insights <span class="text-yellow-400">& Inspiration</span>
+          </h2>
+          <p class="mb-4 text-lg">
+            Stay informed with the latest career advice, industry insights, and
+            success stories from our community of graduates and professionals.
+          </p>
+          <h3 class="text-2xl font-bold mb-2">Your Guide to Career Success</h3>
+          <p class="mb-6">
+            From landing your first internship to negotiating your dream job
+            offer, our expert-written articles provide actionable insights and
+            real-world advice to help you navigate your career journey with
+            confidence.
+          </p>
+          <!-- Category tags -->
+          <div class="flex flex-wrap gap-2 mb-3">
+            <span
+              class="px-3 py-1 bg-yellow-400 text-white rounded-full text-sm"
+              >All</span
+            >
+            <span
+              class="px-3 py-1 bg-yellow-200 text-yellow-800 rounded-full text-sm"
+              >Career Tips</span
+            >
+            <span
+              class="px-3 py-1 bg-yellow-200 text-yellow-800 rounded-full text-sm"
+              >Interview Prep</span
+            >
+            <span
+              class="px-3 py-1 bg-yellow-200 text-yellow-800 rounded-full text-sm"
+              >Remote Work</span
+            >
+            <span
+              class="px-3 py-1 bg-yellow-200 text-yellow-800 rounded-full text-sm"
+              >Networking</span
+            >
+            <span
+              class="px-3 py-1 bg-yellow-200 text-yellow-800 rounded-full text-sm"
+              >Salary Tips</span
+            >
+            <span
+              class="px-3 py-1 bg-yellow-200 text-yellow-800 rounded-full text-sm"
+              >Technology</span
+            >
+          </div>
+        </div>
+        <div class="flex-1 flex justify-center">
+          <img
+            src="./src/inspiration.png"
+            alt="Inspiration"
+            class="w-72 rounded-xl shadow-lg object-cover"
+          />
         </div>
       </div>
-      <div class="flex-1 flex justify-center">
-        <img src="./src/inspiration.png" alt="Inspiration" class="w-72 rounded-xl shadow-lg object-cover">
-      </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Blog Cards -->
-  <section class="py-12 px-8 grid grid-cols-1 md:grid-cols-3 gap-6 bg-yellow-50">
-    <!-- Card 1 -->
-    <div class="bg-white rounded-2xl p-6 shadow-lg">
-      <span class="px-2 py-1 bg-yellow-100 font-bold text-yellow-700 rounded text-xs mb-2 inline-block">Career Tips</span>
-      <h4 class="font-bold text-lg mb-2">10 Essential Skills Every Graduate Needs in 2024</h4>
-      <p class="mb-3 text-gray-600">Discover the most in-demand skills that will set you apart in today’s competitive job market and boost your career prospects.</p>
-      <div class="flex gap-4 text-gray-400 text-xs mb-2">
-        <span>Sarah Johnson</span>
-        <span>March 15, 2024</span>
+    <!-- Blog Cards -->
+    <section
+      class="py-12 px-8 grid grid-cols-1 md:grid-cols-3 gap-6 bg-yellow-50"
+    >
+      <!-- Card 1 -->
+      <div class="bg-white rounded-2xl p-6 shadow-lg">
+        <span
+          class="px-2 py-1 bg-yellow-100 font-bold text-yellow-700 rounded text-xs mb-2 inline-block"
+          >Career Tips</span
+        >
+        <h4 class="font-bold text-lg mb-2">
+          10 Essential Skills Every Graduate Needs in 2024
+        </h4>
+        <p class="mb-3 text-gray-600">
+          Discover the most in-demand skills that will set you apart in today’s
+          competitive job market and boost your career prospects.
+        </p>
+        <div class="flex gap-4 text-gray-400 text-xs mb-2">
+          <span>Sarah Johnson</span>
+          <span>March 15, 2024</span>
+        </div>
+        <div class="flex justify-between text-yellow-400 text-xs">
+          5 min read <span class="text-gray-400">24</span>
+        </div>
+        <a href="#" class="text-yellow-500 mt-2 inline-block"
+          >Read More &rarr;</a
+        >
       </div>
-      <div class="flex justify-between text-yellow-400 text-xs">5 min read <span class="text-gray-400">24</span></div>
-      <a href="#" class="text-yellow-500 mt-2 inline-block">Read More &rarr;</a>
-    </div>
-    <!-- Card 2 -->
-    <div class="bg-white rounded-2xl p-6 shadow-lg">
-      <span class="px-2 py-1 bg-yellow-100 font-bold text-yellow-700 rounded text-xs mb-2 inline-block">Interview Prep</span>
-      <h4 class="font-bold text-lg mb-2">How to Ace Your First Internship Interview</h4>
-      <p class="mb-3 text-gray-600">A comprehensive guide to preparing for your internship interviews, including common questions and expert tips for success.</p>
-      <div class="flex gap-4 text-gray-400 text-xs mb-2">
-        <span>Michael Chen</span>
-        <span>March 12, 2024</span>
+      <!-- Card 2 -->
+      <div class="bg-white rounded-2xl p-6 shadow-lg">
+        <span
+          class="px-2 py-1 bg-yellow-100 font-bold text-yellow-700 rounded text-xs mb-2 inline-block"
+          >Interview Prep</span
+        >
+        <h4 class="font-bold text-lg mb-2">
+          How to Ace Your First Internship Interview
+        </h4>
+        <p class="mb-3 text-gray-600">
+          A comprehensive guide to preparing for your internship interviews,
+          including common questions and expert tips for success.
+        </p>
+        <div class="flex gap-4 text-gray-400 text-xs mb-2">
+          <span>Michael Chen</span>
+          <span>March 12, 2024</span>
+        </div>
+        <div class="flex justify-between text-yellow-400 text-xs">
+          7 min read <span class="text-gray-400">18</span>
+        </div>
+        <a href="#" class="text-yellow-500 mt-2 inline-block"
+          >Read More &rarr;</a
+        >
       </div>
-      <div class="flex justify-between text-yellow-400 text-xs">7 min read <span class="text-gray-400">18</span></div>
-      <a href="#" class="text-yellow-500 mt-2 inline-block">Read More &rarr;</a>
-    </div>
-    <!-- Card 3 -->
-    <div class="bg-white rounded-2xl p-6 shadow-lg">
-      <span class="px-2 py-1 bg-yellow-100 font-bold text-yellow-700 rounded text-xs mb-2 inline-block">Remote Work</span>
-      <h4 class="font-bold text-lg mb-2">The Future of Remote Work for New Graduates</h4>
-      <p class="mb-3 text-gray-600">Exploring the evolving landscape of remote work opportunities and how graduates can leverage this trend for career growth.</p>
-      <div class="flex gap-4 text-gray-400 text-xs mb-2">
-        <span>Emily Rodriguez</span>
-        <span>March 10, 2024</span>
+      <!-- Card 3 -->
+      <div class="bg-white rounded-2xl p-6 shadow-lg">
+        <span
+          class="px-2 py-1 bg-yellow-100 font-bold text-yellow-700 rounded text-xs mb-2 inline-block"
+          >Remote Work</span
+        >
+        <h4 class="font-bold text-lg mb-2">
+          The Future of Remote Work for New Graduates
+        </h4>
+        <p class="mb-3 text-gray-600">
+          Exploring the evolving landscape of remote work opportunities and how
+          graduates can leverage this trend for career growth.
+        </p>
+        <div class="flex gap-4 text-gray-400 text-xs mb-2">
+          <span>Emily Rodriguez</span>
+          <span>March 10, 2024</span>
+        </div>
+        <div class="flex justify-between text-yellow-400 text-xs">
+          6 min read <span class="text-gray-400">31</span>
+        </div>
+        <a href="#" class="text-yellow-500 mt-2 inline-block"
+          >Read More &rarr;</a
+        >
       </div>
-      <div class="flex justify-between text-yellow-400 text-xs">6 min read <span class="text-gray-400">31</span></div>
-      <a href="#" class="text-yellow-500 mt-2 inline-block">Read More &rarr;</a>
-    </div>
-    <!-- Add more cards as needed in new grid columns -->
-  </section>
+      <!-- Add more cards as needed -->
+    </section>
 
-  <!-- Skills Section -->
-  <section class="py-12 px-8 bg-yellow-100 flex flex-col md:flex-row gap-10">
-    <div class="flex-1 bg-white p-8 rounded-lg shadow">
-      <h3 class="font-bold text-xl mb-4">Popular Skill Categories</h3>
+    <!-- Skills Section -->
+    <section class="py-12 px-8 bg-yellow-100 flex flex-col md:flex-row gap-10">
+      <div class="flex-1 bg-white p-8 rounded-lg shadow">
+        <h3 class="font-bold text-xl mb-4">Popular Skill Categories</h3>
+        <div>
+          <h5 class="font-bold text-yellow-500 mb-2">Technical Skills</h5>
+          <div class="mb-3">
+            <div class="flex justify-between">
+              <span>JavaScript/React</span><span>85%</span>
+            </div>
+            <div class="h-2 bg-yellow-200 rounded-full">
+              <div class="h-2 bg-yellow-400 rounded-full w-5/6"></div>
+            </div>
+          </div>
+          <div class="mb-3">
+            <div class="flex justify-between">
+              <span>Python/Django</span><span>78%</span>
+            </div>
+            <div class="h-2 bg-yellow-200 rounded-full">
+              <div class="h-2 bg-yellow-400 rounded-full w-4/5"></div>
+            </div>
+          </div>
+          <!-- More Skills -->
+        </div>
+        <div class="mt-6">
+          <h5 class="font-bold text-yellow-500 mb-2">Design Skills</h5>
+          <div class="mb-3">
+            <div class="flex justify-between">
+              <span>UI/UX Design</span><span>82%</span>
+            </div>
+            <div class="h-2 bg-yellow-200 rounded-full">
+              <div class="h-2 bg-yellow-400 rounded-full w-[82%]"></div>
+            </div>
+          </div>
+          <!-- More Skills -->
+        </div>
+      </div>
+      <div class="flex-1 bg-white p-8 rounded-lg shadow">
+        <h5 class="font-bold text-yellow-500 mb-2">Business Skills</h5>
+        <div class="mb-3">
+          <div class="flex justify-between">
+            <span>Digital Marketing</span><span>88%</span>
+          </div>
+          <div class="h-2 bg-yellow-200 rounded-full">
+            <div class="h-2 bg-yellow-400 rounded-full w-[88%]"></div>
+          </div>
+        </div>
+        <div class="mb-3">
+          <div class="flex justify-between">
+            <span>Project Management</span><span>80%</span>
+          </div>
+          <div class="h-2 bg-yellow-200 rounded-full">
+            <div class="h-2 bg-yellow-400 rounded-full w-4/5"></div>
+          </div>
+        </div>
+        <!-- More Skills -->
+      </div>
+    </section>
+
+    <!-- Internships Listing -->
+    <section class="py-12 px-8 bg-yellow-50">
+      <div class="flex justify-between items-center mb-6">
+        <h2 class="text-2xl font-bold sm:text-4xl">Internships</h2>
+        <a
+          href="#"
+          class="px-4 py-2 bg-yellow-400 text-white rounded shadow hover:bg-yellow-500 sm:px-8 sm:py-4 sm:font-bold"
+          >View All Internships</a
+        >
+      </div>
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+        <!-- Example Internship Card -->
+        <div class="bg-white rounded-xl p-6 shadow-md">
+          <h4 class="font-bold text-lg mb-1">Software Engineering Intern</h4>
+          <p class="text-gray-500 mb-1">TechCorp Solutions</p>
+          <div class="text-gray-400 text-sm mb-2">
+            Bangalore, Karnataka • 3 months
+          </div>
+          <div class="text-xs text-gray-500 mb-2">React | Node.js | Python</div>
+          <div class="text-yellow-400 font-bold mb-4">₹5,000/month</div>
+          <a
+            href="#"
+            class="bg-yellow-300 text-white px-4 py-2 rounded shadow hover:bg-yellow-400"
+            >Apply Now</a
+          >
+        </div>
+
+        <div class="bg-white rounded-xl p-6 shadow-md">
+          <h4 class="font-bold text-lg mb-1">Data Science Intern</h4>
+          <p class="text-gray-500 mb-1">DataFlow Analytics</p>
+          <div class="text-gray-400 text-sm mb-2">
+            Cyberabad/Hi-Tech City • 6 months
+          </div>
+          <div class="text-xs text-gray-500 mb-2">
+            Python | Machine Learning | SQL
+          </div>
+          <div class="text-yellow-400 font-bold mb-4">₹4,500/month</div>
+          <a
+            href="#"
+            class="bg-yellow-300 text-white px-4 py-2 rounded shadow hover:bg-yellow-400"
+            >Apply Now</a
+          >
+        </div>
+
+        <div class="bg-white rounded-xl p-6 shadow-md">
+          <h4 class="font-bold text-lg mb-1">UI/UX Design Intern</h4>
+          <p class="text-gray-500 mb-1">Creative Studio</p>
+          <div class="text-gray-400 text-sm mb-2">
+            Oxford of the East • 4 months
+          </div>
+          <div class="text-xs text-gray-500 mb-2">
+            Figma | User Research | Prototyping
+          </div>
+          <div class="text-yellow-400 font-bold mb-4">₹4,000/month</div>
+          <a
+            href="#"
+            class="bg-yellow-300 text-white px-4 py-2 rounded shadow hover:bg-yellow-400"
+            >Apply Now</a
+          >
+        </div>
+
+        <div class="bg-white rounded-xl p-6 shadow-md">
+          <h4 class="font-bold text-lg mb-1">Marketing Intern</h4>
+          <p class="text-gray-500 mb-1">Growth Agency</p>
+          <div class="text-gray-400 text-sm mb-2">
+            Chennai, Tamil Nadu • 6 months
+          </div>
+          <div class="text-xs text-gray-500 mb-2">
+            Digital Marketing | Analytics | Content
+          </div>
+          <div class="text-yellow-400 font-bold mb-4">₹3,000/month</div>
+          <a
+            href="#"
+            class="bg-yellow-300 text-white px-4 py-2 rounded shadow hover:bg-yellow-400"
+            >Apply Now</a
+          >
+        </div>
+
+        <div class="bg-white rounded-xl p-6 shadow-md">
+          <h4 class="font-bold text-lg mb-1">Finance Intern</h4>
+          <p class="text-gray-500 mb-1">Investment Partners</p>
+          <div class="text-gray-400 text-sm mb-2">
+            Haryana, Delhi NCR • 3 months
+          </div>
+          <div class="text-xs text-gray-500 mb-2">
+            Excel | Financial Modeling | Analysis
+          </div>
+          <div class="text-yellow-400 font-bold mb-4">₹4,800/month</div>
+          <a
+            href="#"
+            class="bg-yellow-300 text-white px-4 py-2 rounded shadow hover:bg-yellow-400"
+            >Apply Now</a
+          >
+        </div>
+
+        <div class="bg-white rounded-xl p-6 shadow-md">
+          <h4 class="font-bold text-lg mb-1">Product Management Intern</h4>
+          <p class="text-gray-500 mb-1">Innovation Labs</p>
+          <div class="text-gray-400 text-sm mb-2">
+            Uttar Pradesh, Delhi NCR • 5 months
+          </div>
+          <div class="text-xs text-gray-500 mb-2">
+            Product Stategy | Analytics | User Research
+          </div>
+          <div class="text-yellow-400 font-bold mb-4">₹5,200/month</div>
+          <a
+            href="#"
+            class="bg-yellow-300 text-white px-4 py-2 rounded shadow hover:bg-yellow-400"
+            >Apply Now</a
+          >
+        </div>
+      </div>
+    </section>
+
+    <!-- Statistics Section -->
+    <section
+      class="bg-yellow-100 py-12 px-8 flex flex-row sm:flex-row gap-8 justify-center items-center text-center"
+    >
       <div>
-        <h5 class="font-bold text-yellow-500 mb-2">Technical Skills</h5>
-        <div class="mb-3">
-          <div class="flex justify-between">
-            <span>JavaScript/React</span><span>85%</span>
+        <span class="text-3xl font-extrabold text-yellow-400">500+</span>
+        <div class="text-gray-600">Active Internships</div>
+      </div>
+      <div>
+        <span class="text-3xl font-extrabold text-yellow-400">95%</span>
+        <div class="text-gray-600">Success Rate</div>
+      </div>
+      <div>
+        <span class="text-3xl font-extrabold text-yellow-400">50k+</span>
+        <div class="text-gray-600">Students Placed</div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-yellow-100 px-8 py-12">
+      <div class="flex flex-col md:flex-row justify-between items-start gap-8">
+        <div class="max-w-sm">
+          <span class="font-bold text-yellow-400 text-xl mb-2 block"
+            >InternLink</span
+          >
+          <p class="mb-4 text-gray-700">
+            Empowering the next generation of professionals with premium
+            internships, in-demand skills, and career guidance.
+          </p>
+          <div class="mb-2">
+            <span class="block text-gray-500">help@internlink.com</span>
+            <span class="block text-gray-500">+91 12345 68789</span>
+            <span class="block text-gray-500">Banglore, Karnataka</span>
           </div>
-          <div class="h-2 bg-yellow-200 rounded-full"><div class="h-2 bg-yellow-400 rounded-full w-5/6"></div></div>
+          <form class="flex flex-col gap-2 mt-4">
+            <label class="font-bold text-gray-700" for="newsletter"
+              >Stay Updated</label
+            >
+            <div class="flex">
+              <input
+                id="newsletter"
+                type="email"
+                placeholder="Enter your email"
+                class="border border-yellow-300 rounded-l px-4 py-2 focus:outline-none"
+              />
+              <button
+                type="submit"
+                class="px-4 py-2 bg-yellow-400 text-white rounded-r font-bold hover:bg-yellow-500"
+              >
+                Subscribe
+              </button>
+            </div>
+          </form>
         </div>
-        <div class="mb-3">
-          <div class="flex justify-between">
-            <span>Python/Django</span><span>78%</span>
+        <!-- Footer Links -->
+        <div class="flex-1 grid grid-cols-2 md:grid-cols-4 gap-6">
+          <div>
+            <div class="font-bold mb-2">Platform</div>
+            <ul>
+              <li>Find Internships</li>
+              <li>Skill Development</li>
+              <li>Career Blog</li>
+              <li>Success Stories</li>
+            </ul>
           </div>
-          <div class="h-2 bg-yellow-200 rounded-full"><div class="h-2 bg-yellow-400 rounded-full w-4/5"></div></div>
-        </div>
-        <!-- More Skills -->
-      </div>
-      <div class="mt-6">
-        <h5 class="font-bold text-yellow-500 mb-2">Design Skills</h5>
-        <div class="mb-3">
-          <div class="flex justify-between">
-            <span>UI/UX Design</span><span>82%</span>
+          <div>
+            <div class="font-bold mb-2">Company</div>
+            <ul>
+              <li>About Us</li>
+              <li>Careers</li>
+              <li>Press</li>
+              <li>Contact</li>
+            </ul>
           </div>
-          <div class="h-2 bg-yellow-200 rounded-full"><div class="h-2 bg-yellow-400 rounded-full w-[82%]"></div></div>
-        </div>
-        <!-- More Skills -->
-      </div>
-    </div>
-    <div class="flex-1 bg-white p-8 rounded-lg shadow">
-      <h5 class="font-bold text-yellow-500 mb-2">Business Skills</h5>
-      <div class="mb-3">
-        <div class="flex justify-between">
-          <span>Digital Marketing</span><span>88%</span>
-        </div>
-        <div class="h-2 bg-yellow-200 rounded-full"><div class="h-2 bg-yellow-400 rounded-full w-[88%]"></div></div>
-      </div>
-      <div class="mb-3">
-        <div class="flex justify-between">
-          <span>Project Management</span><span>80%</span>
-        </div>
-        <div class="h-2 bg-yellow-200 rounded-full"><div class="h-2 bg-yellow-400 rounded-full w-4/5"></div></div>
-      </div>
-      <!-- More Skills -->
-    </div>
-  </section>
-
-  <!-- Internships Listing -->
-  <section class="py-12 px-8 bg-yellow-50">
-    <div class="flex justify-between items-center mb-6">
-      <h2 class="text-3xl font-bold">Internships</h2>
-      <a href="#" class="px-4 py-2 bg-yellow-400 text-white rounded shadow hover:bg-yellow-500">View All Internships</a>
-    </div>
-    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
-      <!-- Example Internship Card -->
-      <div class="bg-white rounded-xl p-6 shadow-md">
-        <h4 class="font-bold text-lg mb-1">Software Engineering Intern</h4>
-        <p class="text-gray-500 mb-1">TechCorp Solutions</p>
-        <div class="text-gray-400 text-sm mb-2">Bangalore, Karnataka • 3 months</div>
-        <div class="text-xs text-gray-500 mb-2">React | Node.js | Python</div>
-        <div class="text-yellow-400 font-bold mb-4">₹5,000/month</div>
-        <a href="#" class="bg-yellow-300 text-white px-4 py-2 rounded shadow hover:bg-yellow-400">Apply Now</a>
-      </div>
-
-       <div class="bg-white rounded-xl p-6 shadow-md">
-        <h4 class="font-bold text-lg mb-1">Data Science Intern</h4>
-        <p class="text-gray-500 mb-1">DataFlow Analytics</p>
-        <div class="text-gray-400 text-sm mb-2">Cyberabad/Hi-Tech City • 6 months</div>
-        <div class="text-xs text-gray-500 mb-2">Python | Machine Learning | SQL</div>
-        <div class="text-yellow-400 font-bold mb-4">₹4,500/month</div>
-        <a href="#" class="bg-yellow-300 text-white px-4 py-2 rounded shadow hover:bg-yellow-400">Apply Now</a>
-      </div>
-      
-      <div class="bg-white rounded-xl p-6 shadow-md">
-        <h4 class="font-bold text-lg mb-1">UI/UX Design Intern</h4>
-        <p class="text-gray-500 mb-1">Creative Studio</p>
-        <div class="text-gray-400 text-sm mb-2">Oxford of the East • 4 months</div>
-        <div class="text-xs text-gray-500 mb-2">Figma | User Research | Prototyping</div>
-        <div class="text-yellow-400 font-bold mb-4">₹4,000/month</div>
-        <a href="#" class="bg-yellow-300 text-white px-4 py-2 rounded shadow hover:bg-yellow-400">Apply Now</a>
-      </div>
-      
-      <div class="bg-white rounded-xl p-6 shadow-md">
-        <h4 class="font-bold text-lg mb-1">Marketing Intern</h4>
-        <p class="text-gray-500 mb-1">Growth Agency</p>
-        <div class="text-gray-400 text-sm mb-2">Chennai, Tamil Nadu • 6 months</div>
-        <div class="text-xs text-gray-500 mb-2">Digital Marketing | Analytics | Content</div>
-        <div class="text-yellow-400 font-bold mb-4">₹3,000/month</div>
-        <a href="#" class="bg-yellow-300 text-white px-4 py-2 rounded shadow hover:bg-yellow-400">Apply Now</a>
-      </div>
-
-      <div class="bg-white rounded-xl p-6 shadow-md">
-        <h4 class="font-bold text-lg mb-1">Finance Intern</h4>
-        <p class="text-gray-500 mb-1">Investment Partners</p>
-        <div class="text-gray-400 text-sm mb-2">Haryana, Delhi NCR • 3 months</div>
-        <div class="text-xs text-gray-500 mb-2">Excel | Financial Modeling | Analysis</div>
-        <div class="text-yellow-400 font-bold mb-4">₹4,800/month</div>
-        <a href="#" class="bg-yellow-300 text-white px-4 py-2 rounded shadow hover:bg-yellow-400">Apply Now</a>
-      </div>
-
-      <div class="bg-white rounded-xl p-6 shadow-md">
-        <h4 class="font-bold text-lg mb-1">Product Management Intern</h4>
-        <p class="text-gray-500 mb-1">Innovation Labs</p>
-        <div class="text-gray-400 text-sm mb-2">Uttar Pradesh, Delhi NCR • 5 months</div>
-        <div class="text-xs text-gray-500 mb-2">Product Stategy | Analytics | User Research</div>
-        <div class="text-yellow-400 font-bold mb-4">₹5,200/month</div>
-        <a href="#" class="bg-yellow-300 text-white px-4 py-2 rounded shadow hover:bg-yellow-400">Apply Now</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- Statistics Section -->
-  <section class="bg-yellow-100 py-12 px-8 flex flex-col md:flex-row gap-8 justify-center items-center text-center">
-    <div>
-      <span class="text-3xl font-extrabold text-yellow-400">500+</span>
-      <div class="text-gray-600">Active Internships</div>
-    </div>
-    <div>
-      <span class="text-3xl font-extrabold text-yellow-400">95%</span>
-      <div class="text-gray-600">Success Rate</div>
-    </div>
-    <div>
-      <span class="text-3xl font-extrabold text-yellow-400">50k+</span>
-      <div class="text-gray-600">Students Placed</div>
-    </div>
-  </section>
-
-  <!-- Footer -->
-  <footer class="bg-yellow-100 px-8 py-12">
-    <div class="flex flex-col md:flex-row justify-between items-start gap-8">
-      <div class="max-w-sm">
-        <span class="font-bold text-yellow-400 text-xl mb-2 block">Gradgate</span>
-        <p class="mb-4 text-gray-700">Empowering the next generation of professionals with premium internships, in-demand skills, and career guidance.</p>
-        <div class="mb-2">
-          <span class="block text-gray-500">hello@gradgate.com</span>
-          <span class="block text-gray-500">+1 (555) 123-4567</span>
-          <span class="block text-gray-500">San Francisco, CA</span>
-        </div>
-        <form class="flex flex-col gap-2 mt-4">
-          <label class="font-bold text-gray-700" for="newsletter">Stay Updated</label>
-          <div class="flex">
-            <input id="newsletter" type="email" placeholder="Enter your email" class="border border-yellow-300 rounded-l px-4 py-2 focus:outline-none">
-            <button type="submit" class="px-4 py-2 bg-yellow-400 text-white rounded-r font-bold hover:bg-yellow-500">Subscribe</button>
+          <div>
+            <div class="font-bold mb-2">Resources</div>
+            <ul>
+              <li>Help Center</li>
+              <li>Privacy Policy</li>
+              <li>Terms of Service</li>
+              <li>Cookie Policy</li>
+            </ul>
           </div>
-        </form>
-      </div>
-      <!-- Footer Links -->
-      <div class="flex-1 grid grid-cols-2 md:grid-cols-4 gap-6">
-        <div>
-          <div class="font-bold mb-2">Platform</div>
-          <ul>
-            <li>Find Internships</li>
-            <li>Skill Development</li>
-            <li>Career Blog</li>
-            <li>Success Stories</li>
-          </ul>
-        </div>
-        <div>
-          <div class="font-bold mb-2">Company</div>
-          <ul>
-            <li>About Us</li>
-            <li>Careers</li>
-            <li>Press</li>
-            <li>Contact</li>
-          </ul>
-        </div>
-        <div>
-          <div class="font-bold mb-2">Resources</div>
-          <ul>
-            <li>Help Center</li>
-            <li>Privacy Policy</li>
-            <li>Terms of Service</li>
-            <li>Cookie Policy</li>
-          </ul>
-        </div>
-        <div>
-          <div class="font-bold mb-2">Support</div>
-          <ul>
-            <li>Student Support</li>
-            <li>Employer Portal</li>
-            <li>API Documentation</li>
-            <li>Community Forum</li>
-          </ul>
+          <div>
+            <div class="font-bold mb-2">Support</div>
+            <ul>
+              <li>Student Support</li>
+              <li>Employer Portal</li>
+              <li>API Documentation</li>
+              <li>Community Forum</li>
+            </ul>
+          </div>
         </div>
       </div>
-    </div>
-  </footer>
-</body>
+    </footer>
+
+    <!-- JS should be at the bottom -->
+    <script>
+      const btn = document.getElementById('menu-btn');
+      const menu = document.getElementById('menu');
+
+      btn.addEventListener('click', () => {
+        if (menu.classList.contains('max-h-0')) {
+          menu.classList.remove('max-h-0');
+          menu.classList.add('max-h-96'); // Expand smoothly
+        } else {
+          menu.classList.remove('max-h-96');
+          menu.classList.add('max-h-0'); // Collapse smoothly
+        }
+      });
+    </script>
+  </body>
 </html>
